@@ -35,9 +35,13 @@
     width: 100%;
 }
 
+#top-header .call {z-index: 100;}
+
 #top-header .call i {
     margin-right: 18px;
 }
+
+#top-header .account {z-index: 100;}
 
 #top-header .account ul {
     list-style: none;
@@ -45,7 +49,7 @@
 
 #top-header .account ul li {
     display: inline-block;
-    padding: 0 20px;
+    padding: 0 18px;
     border-right: 1px solid gray;
 }
 
@@ -53,7 +57,7 @@
     text-decoration: none;
     color:#333;
     transition: 0.2s;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 #top-header .account ul li a:hover {color:yellow}
@@ -107,6 +111,7 @@
     font-size: 18px;
     padding: 5px 12px;
     transition: 0.2s;
+    font-style: italic;
 }
 
 #bottom-header .main-menu ul li a:hover {
@@ -136,6 +141,7 @@
 
 #bottom-header .social .currency {
     margin-left:46px;
+    padding-top:5px;
 }
 
 .social ul li a{
@@ -1066,6 +1072,8 @@
         text-align: center;
         margin-bottom: 30px;
     }
+
+    #bottom-footer { text-align: center;}
 }
 
 /* Màn Hình từ 576px trở lên nhỏ hơn 768px */
