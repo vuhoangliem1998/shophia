@@ -11,9 +11,21 @@
 
 /*============================== Begin Top Header ==================================*/
 #top-header {
-    background-image: linear-gradient(rgba(173, 25, 25, 0.42), rgba(223, 13, 13, 0.72));
+    background:  #fa7b7b;
     padding: 12px 0;
-    border-bottom: 20px solid rgba(215, 69, 69, 0.72);
+    border-bottom: 30px solid #fa7b7b;
+    position: relative;
+}
+
+#top-header::after{
+    content:'';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.1);
 }
 
 #top-header .container {
@@ -33,7 +45,7 @@
 
 #top-header .account ul li {
     display: inline-block;
-    padding: 0 38px;
+    padding: 0 20px;
     border-right: 1px solid gray;
 }
 
@@ -41,6 +53,7 @@
     text-decoration: none;
     color:#333;
     transition: 0.2s;
+    font-size: 14px;
 }
 
 #top-header .account ul li a:hover {color:yellow}
@@ -64,8 +77,8 @@
     width: 100%;
 }
 
-#bottom-header .logo {
-    transform: translateX(-50px);
+#bottom-header .logo img {
+    width: 200px;
 }
 
 #bottom-header .btn-menu{
@@ -76,7 +89,7 @@
     float: right;
     font-size: 30px;
     padding:10px 10px 0 0;
-    transform: translateY(40px);
+    transform: translateY(90px);
     cursor: pointer;
 }
 
@@ -100,13 +113,38 @@
     color:yellow;
 }
 
+#bottom-header .social {
+    display: flex;
+    justify-content: space-between;
+}
+
+#bottom-header .social select {
+    background: #000;
+    color: #fff;
+    border: none;
+    outline: none;
+    display: block;
+    width: 90px;
+    height: 35px;
+    padding: 8px;
+}
+
+#bottom-header .social select option{
+    padding: 5px!important;
+}
+
+
+#bottom-header .social .currency {
+    margin-left:46px;
+}
+
 .social ul li a{
     text-decoration: none;
     display: block;
     color:#e5d3ad;
     font-size: 18px;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     text-align: center;
     line-height: 40px;
     border: 2px solid #e5d3ad;
