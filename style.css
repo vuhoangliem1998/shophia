@@ -1,0 +1,1121 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+
+/*============================== Begin Top Header ==================================*/
+#top-header {
+    background-image: linear-gradient(rgba(173, 25, 25, 0.42), rgba(223, 13, 13, 0.72));
+    padding: 12px 0;
+    border-bottom: 20px solid rgba(215, 69, 69, 0.72);
+}
+
+#top-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#top-header .call i {
+    margin-right: 18px;
+}
+
+#top-header .account ul {
+    list-style: none;
+}
+
+#top-header .account ul li {
+    display: inline-block;
+    padding: 0 38px;
+    border-right: 1px solid gray;
+}
+
+#top-header .account ul li a{
+    text-decoration: none;
+    color:#333;
+    transition: 0.2s;
+}
+
+#top-header .account ul li a:hover {color:yellow}
+
+#top-header .account ul li:last-child{
+    padding-right: 0;
+    border-right: none;
+}
+
+/*============================== End Top Header ============================*/
+
+/*============================== Begin Bottom Header ============================*/
+
+#bottom-header {
+    padding-top: 10px;
+}
+
+#bottom-header .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#bottom-header .logo {
+    transform: translateX(-50px);
+}
+
+#bottom-header .btn-menu{
+    display: none;
+}
+
+#bottom-header .btn-menu i{
+    float: right;
+    font-size: 30px;
+    padding:10px 10px 0 0;
+    transform: translateY(40px);
+    cursor: pointer;
+}
+
+#bottom-header ul {
+    list-style: none;
+}
+
+#bottom-header ul li {
+    display: inline-block;
+}
+
+#bottom-header .main-menu ul li a {
+    text-decoration: none;
+    color:#000;
+    font-size: 18px;
+    padding: 5px 12px;
+    transition: 0.2s;
+}
+
+#bottom-header .main-menu ul li a:hover {
+    color:yellow;
+}
+
+.social ul li a{
+    text-decoration: none;
+    display: block;
+    color:#e5d3ad;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border: 2px solid #e5d3ad;
+    border-radius: 50%;
+    margin: 2px 4px;
+    transition: 0.4s;
+}
+
+.social ul li a:hover {
+    background: #4267b2;
+}
+
+#header::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 50px solid #fff;
+    border-left: 180px solid transparent;
+    border-right: 180px solid transparent;
+    position: absolute;
+    z-index: 9999;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*============================== End Bottom Header ============================*/
+
+/*============================== Sldier ============================*/
+#slider {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+}
+
+#slider::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+}
+
+#slider .dot-box {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 999;
+}
+
+#slider .dot-box ul li {
+    display: inline-block;
+    width:15px;
+    height: 15px;
+    transform: rotate(45deg);
+    background:gray;
+    margin:5px;
+}
+
+#slider .dot-box ul li.dot.active {
+    background: #000;
+}
+
+#slider .slide-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#slider .slide-box .slide {
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#slider .slide-box .slide.active {
+    visibility: visible;
+    animation: 400ms ease slideAnimate;
+}
+
+#slider .slide-box .slide .content-slide{
+    border: 3px solid #fff;
+    width: 280px;
+    height: 280px;
+    position: relative;
+    text-align: center;
+    z-index: 3;
+}
+
+
+#slider .slide-box .slide .content-slide .slide-info {
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    position: absolute;
+    top:2%;
+    left: 2%;
+    border: 2px solid #fff;
+}
+
+#slider .slide-box .slide .content-slide .slide-info h4{
+    color:#fff;
+    font-size: 24px;
+    padding:20px 0 10px 0;
+}
+
+#slider .slide-box .slide .content-slide .slide-info h2{
+    color:#000;
+    font-size: 50px;
+    padding: 10px 0;
+}
+
+#slider .slide-box .slide .content-slide .slide-info h5{
+    color:#fff;
+    font-size: 22px;
+    padding:10px 0 10px 0;
+}
+
+#slider .slide-box .slide .content-slide .slide-info p{
+    color:#000;
+    font-size: 35px;
+    padding: 10px 0;
+    font-weight: 800;
+}
+
+@-webkit-keyframes slideAnimate {
+    to { transform: translateX(-100%);}
+    from { transform: translateX(-0%);}
+}
+
+
+
+/*============================== end Slider ============================*/
+
+/*============================== begin Introduce ===========================*/
+#introduce {
+    padding: 60px 0 80px 0;
+}
+#introduce .container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#introduce .container .intro-item {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    background: #cdbc86;
+    color: #fff;
+    height: 100px;
+    position: relative;
+}
+
+#introduce .container .intro-item.left::after{
+    content: '';
+    display: block;
+    position: absolute;
+    right: -50px;
+    top:0;
+    z-index: 10;
+    border-top:50px solid transparent;
+    border-left:50px solid #cdbc86;
+    border-bottom:50px solid transparent;
+}
+
+#introduce .container .intro-item.right::before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: -50px;
+    top:0;
+    z-index: 10;
+    border-top:50px solid transparent;
+    border-right:50px solid #cdbc86;
+    border-bottom:50px solid transparent;
+}
+
+#introduce .container .intro-item.black{
+    background: #000; 
+}
+
+#introduce .container .intro-item.black::before {
+    content: '';
+    display: block;
+    background: #000;
+    position: absolute;
+    left: -40px;
+    top:0;
+    border-top:50px solid transparent;
+    border-left:50px solid #fff;
+    border-bottom:50px solid transparent;
+
+}
+
+#introduce .container .intro-item.black::after {
+    content: '';
+    display: block;
+    background: #000;
+    position: absolute;
+    right: -40px;
+    top:0;
+    border-top:50px solid transparent;
+    border-right:50px solid #fff;
+    border-bottom:50px solid transparent;
+}
+
+#introduce .container .intro-item .icon {
+    text-align: center;
+    width: 30%;
+}
+
+#introduce .container .intro-item.black .icon {
+    text-align: right;
+}
+
+#introduce .container .intro-item.black .info {
+    padding-left: 10%;
+}
+
+#introduce .container .intro-item .icon i {
+    font-size: 40px;
+}
+
+#introduce .container .intro-item .info {
+    width: 90%;
+}
+/*============================== end Introduce ============================*/
+
+/*============================== begin TITLE ============================*/
+.title {
+    padding-bottom: 30px;
+}
+.title h3 {
+    text-align: center;
+    border-bottom:1px solid gray;
+    position: relative;
+}
+
+.title h3 i {
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    z-index: 100;
+    background: #fff;
+    width: 33%;
+}
+
+.title h3::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #cdbc86;
+    top:-5px;
+    left: 38%;
+    position: absolute;
+    z-index: 1000;
+    transform: rotate(45deg);
+}
+
+.title h3::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #cdbc86;
+    top:-5px;
+    right: 38%;
+    position: absolute;
+    z-index: 1000;
+    transform: rotate(45deg);
+}
+
+/*============================== end TITLE ============================*/
+
+/*============================== begin Hanpick ============================*/
+#hanpicked {
+    padding: 50px 0;
+}
+
+#hanpicked .product-feature {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-gap: 20px;
+}
+
+#hanpicked .product-feature .product-item:nth-child(1) {
+    grid-column: 1/5;
+}
+
+#hanpicked .product-feature .product-item:nth-child(2) {
+    grid-column: 1/5;
+}
+
+#hanpicked .product-feature .product-item:nth-child(3) {
+    grid-column: 5/9;
+    grid-row: 1/3;
+}
+
+#hanpicked .product-feature .product-item:nth-child(4) {
+    grid-column: 9/13;
+    grid-row: 1/2;
+}
+
+#hanpicked .product-feature .product-item:nth-child(5) {
+    grid-column: 9/13;
+    grid-row: 2/3;
+}
+
+#hanpicked .product-feature .product-item {
+    position: relative;
+    overflow: hidden;
+}
+
+#hanpicked .product-feature .product-item .product-image {
+    width: 100%;
+    height: 100%;
+    position: absolute; 
+    top:0;
+    left:0;
+}
+
+
+#hanpicked .product-feature .product-item img {
+    width: 100%;
+    height: 100%;
+}
+
+#hanpicked .product-feature .border-white {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    padding: 2rem;
+    box-sizing: border-box;
+    top:5%;
+    left: 5%;
+    border: 4px solid white;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#hanpicked .product-feature .product-item::after {
+    content: '+';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top:-100%;
+    left: 0;
+    background: rgba(0,0,0,0.2);
+    transition: 0.5s;
+    color: white;
+    font-size: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+#hanpicked .product-feature .product-item .btn {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    z-index: 5;
+}
+
+#hanpicked .product-feature .product-item .btn .shop-now {
+    display: block;
+    width: 110px;
+    height: 42px;
+    margin:0 auto;
+    text-align: center;
+    line-height: 42px;
+    text-decoration: none;
+    background: tomato;
+    font-weight: bold;
+    color:#fff;
+    text-transform: uppercase;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#hanpicked .product-feature .product-item:hover .btn .shop-now {
+    visibility: visible;
+    opacity: 1;
+}
+
+#hanpicked .product-feature .product-item:hover .border-white {
+    transform: scale(0);
+}
+
+#hanpicked .product-feature .product-item:hover::after{
+    top:0;
+}
+
+#hanpicked .product-feature > * {
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    border-radius: 2px;
+}
+/*============================== end Hanpick ============================*/
+
+/*============================== begin Summer Collection ============================*/
+#summer-collection .list-product {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 3px;
+    
+}
+
+#summer-collection .list-product .box-product{
+    box-sizing: border-box;
+    width: calc(100%/4);
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+#summer-collection .list-product .box-product::after {
+    content:'';
+    display: block;
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background:rgba(0,0,0,0.4);
+    top:5%;
+    left: 5%;
+    z-index: 1;
+    transition: 0.2s;
+    transform: scale(0);
+}
+
+#summer-collection .list-product .box-product:hover::after {
+    transform: scale(1);
+}
+
+#summer-collection .list-product .box-product .add-to-cart {
+    width:100%;
+    height: 45px;
+    position: absolute;
+    bottom: 2rem;
+    left:0;
+    z-index: 10;
+}
+
+#summer-collection .list-product .box-product .add-to-cart a {
+    width: 110px;
+    height: 45px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 45px;
+    background: #000;
+    text-decoration: none;
+    color:white;
+    position: relative;
+    transition: 0.4s;
+}
+
+#summer-collection .list-product .box-product .add-to-cart a::before {
+    position: absolute;
+    content:'';
+    top:0;
+    left:-45px;
+    border-top:23px solid transparent;
+    border-bottom:22px solid #000;
+    border-left:23px solid transparent;
+    border-right:22px solid #000;
+    transition: 0.4s;
+}
+
+#summer-collection .list-product .box-product .add-to-cart a::after {
+    position: absolute;
+    content:'';
+    top:0;
+    right:-45px;
+    border-top:23px solid transparent;
+    border-bottom:22px solid #000;
+    border-right:23px solid transparent;
+    border-left:22px solid #000;
+    transition: 0.4s;
+}
+
+#summer-collection .list-product .box-product .add-to-cart a:hover,#summer-collection .list-product .box-product:hover .add-to-cart a{
+    background:tomato;
+}
+
+#summer-collection .list-product .box-product .add-to-cart a:hover::after ,#summer-collection .list-product .box-product:hover .add-to-cart a::after{
+    border-left:22px solid tomato;
+    border-bottom:22px solid tomato;
+}
+
+#summer-collection .list-product .box-product .add-to-cart a:hover::before,#summer-collection .list-product .box-product:hover .add-to-cart a::before{
+    border-bottom:22px solid tomato;
+    border-right:22px solid tomato;
+}
+
+#summer-collection .list-product .sale {
+    position: absolute;
+    top:10%;
+    left:10%;
+    background: orangered;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    z-index: 5;
+    color:#fff;
+    transform: scale(0);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+#summer-collection .list-product .box-product:hover .sale{
+    transform: scale(1);
+    opacity: 1;
+}
+
+#summer-collection .list-product .sale span{
+    font-size: 20px;
+    margin-right: 3px;
+}
+
+#summer-collection .list-product img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*============================== end Summer Collection ============================*/
+
+/*============================== begin OUR BRAND  ============================*/
+#our-brand {
+    padding-top: 75px;
+}
+
+#our-brand .box-brand{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+}
+
+#our-brand .box-brand .brand-image {
+    width: calc(100%/6);
+    text-align: center;
+    padding-bottom: 1rem;
+    margin: 100px 0;
+}
+
+/*============================== end OUR BRAND  ============================*/
+
+/*============================== begin Testtmonial ============================*/
+#testimonial {
+    background: #d9bf8f;
+    padding: 30px 0;
+    margin-top: 100px;
+    position: relative;
+}
+
+#testimonial .content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#testimonial .content .person {
+    width: calc(100%/2);
+    display: flex;
+    justify-content: flex-start;
+}
+
+#testimonial .content .person.right {
+    justify-content: flex-end;
+}
+
+#testimonial .title {
+    transform: translateY(-100px);
+}
+
+#testimonial .content .person .info {
+    margin-top:100px;
+}
+
+#testimonial .content .person p {
+    color:white;
+    padding-bottom: 65px;
+}
+
+#testimonial .content .person h2{
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+    padding-bottom: 25px;
+}
+
+#testimonial .content .person small {
+    font-weight: bold;
+    color: grey;
+    display: block;
+}
+
+#testimonial .content .person.right p,
+#testimonial .content .person.right h2,
+#testimonial .content .person.right small{
+    text-align: right;
+}
+/*============================== end Testtmonial  ============================*/
+
+
+/*============================== begin FOOTER ============================*/
+#footer{
+    background: #141414;
+    color: #555555;
+}
+
+#top-footer .container .title-footer {
+    padding-bottom: 40px;
+    font-size: 16px;
+    color:#fff;
+}
+
+
+#top-footer {
+    padding: 60px 0 80px 0;
+    position: relative;
+    border-bottom: 2px solid #555555;
+    margin-bottom: 20px;
+}
+
+#top-footer .container {
+    display: flex;
+    width: 100%;
+}
+
+#top-footer .container .col-2 {
+    width: 20%;
+}
+
+#top-footer .container .col-4{
+    width: 40%;
+}
+
+#top-footer .container ul {
+    list-style: none;
+}
+
+#top-footer .container ul li {
+    padding-bottom: 20px;
+}
+
+#top-footer .container .col-4 ul li {
+    display: inline-block;
+}
+
+#top-footer .container .col-4 .social ul li a {
+    border: none;
+    background: #fff;
+}
+
+#top-footer .container .col-4 .social {
+    margin-bottom: 45px;
+
+}
+
+#top-footer .container .col-4 .social a{
+    color:#000!important;
+}
+
+#top-footer .container .col-4 .subcribe{
+    font-size: 16px ;
+    color:#fff;
+    font-weight: bold;
+    margin-bottom: 55px;
+}
+
+#top-footer .container .col-4 .form form {
+    border:1px solid gray;
+    display: flex;
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+#top-footer .container .col-4 .form input[type="text"] {
+    width: 75%;
+    display: block;
+    padding: 14px 22px;
+    font-size: 16px;
+    outline: none;
+    border:none;
+    background: transparent;
+    color:white;
+}
+
+#top-footer .container .col-4 .form input[type="submit"] {
+    width: 25%;
+    display: block;
+    background: #323031;
+    color: #fff;
+    outline: none;
+    border:none;
+}
+
+#top-footer .container .col-4 .form input[type="text"]::-webkit-input-placeholder{
+    color:white;
+}
+
+#top-footer::after{
+    content: '';
+    display: block;
+    margin: 0 auto;
+
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    border-top:10px solid #555555;
+    border-bottom:10px solid transparent;
+    border-left:10px solid transparent;
+    border-right:10px solid transparent;
+    z-index: 999;
+}
+
+#bottom-footer p {
+    padding: 10px 0;
+
+}
+
+#bottom-footer{
+    padding-bottom: 30px;
+    border-bottom: 30px solid black;
+}
+
+
+/*============================== end FOOTER ============================*/
+
+
+/*
+*
+*
+*
+=============================================== RESPONSIVE =================================================
+*
+*
+*
+*/
+
+/* Màn Hình từ 992px trở lên */
+@media only screen and (max-width: 	992px) {
+    #bottom-header .logo {
+        transform: translateX(0px);
+    }
+    #bottom-header .logo img {width: 150px;}
+    #top-header .container , #bottom-header .container , #introduce .container{
+        flex-direction: column;
+    }
+
+    #top-header .call {
+        margin-bottom: 15px;
+    }
+
+    #bottom-header .logo {
+        order: 2;
+        text-align: center;
+    }
+    #bottom-header .main-menu {
+        order: 3;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    #bottom-header .social {
+        order: 1;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    #introduce .container .intro-item {
+        width: 100%;
+    }
+
+    #introduce {
+        padding: 50px 0 30px 0;
+    }
+
+    #introduce .container .intro-item.left::after,
+    #introduce .container .intro-item.right::before,
+    #introduce .container .intro-item.black::before,
+    #introduce .container .intro-item.black::after {
+        display: none;
+    }
+
+    #summer-collection .list-product .box-product {
+        width: calc(100%/3);
+    }
+
+    #our-brand .box-brand .brand-image {
+        width: calc(100%/3)!important;
+        margin: 0 0;
+    }
+
+    #testimonial .content .person {
+        width: calc(100%);
+    }
+
+}
+
+/* Màn Hình từ 768px trở lên nhỏ hơn 992px */
+@media only screen and (max-width: 	768px) {
+    #bottom-header .logo img {width: 100px;}
+
+    #top-header .call {
+        display: none;
+    }
+
+    #top-header .account ul li {
+        padding: 0 20px;
+    }
+
+    .title h3 i {
+        width: 50%;
+    }
+    .title h3::before {
+        left: 25%;
+    }
+    .title h3::after {
+        right: 25%;
+    }
+
+    #introduce {
+        padding: 30px 0 10px 0;
+    }
+
+
+    #hanpicked .product-feature .product-item:nth-child(1) {
+        grid-column: 1/7 !important;
+        grid-row:1;
+    }
+    
+    #hanpicked .product-feature .product-item:nth-child(2) {
+        grid-column: 7/13 !important;
+        grid-row:1;
+    }
+    
+    #hanpicked .product-feature .product-item:nth-child(3) {
+        grid-column: 1/13 !important;
+        grid-row:2;
+    }
+    
+    #hanpicked .product-feature .product-item:nth-child(4) {
+        grid-column: 1/7 !important;
+        grid-row:3;
+    }
+    
+    #hanpicked .product-feature .product-item:nth-child(5) {
+        grid-column: 7/13 !important;
+        grid-row:3;
+    }
+
+    #summer-collection .list-product .box-product {
+        width: calc(100%/2);
+    }
+
+    #our-brand .box-brand .brand-image {
+        width: calc(100%/2)!important;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    #testimonial .content .person .info {
+        margin-top:70px;
+    }
+
+    #testimonial .content .person p {
+        padding-bottom: 15px;
+    }
+
+    #testimonial .content .person h2{
+        padding-bottom: 10px;
+    }
+
+    #top-footer .container .col-2 {
+        display: none;
+    }
+
+    #top-footer .container .col-4 {
+        width: 100%;
+    }
+
+    #top-footer .container .title-footer {
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+    #top-footer .container .col-4 .social {
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    #top-footer .container .col-4 .subcribe {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
+
+/* Màn Hình từ 576px trở lên nhỏ hơn 768px */
+@media only screen and (max-width: 	576px) {
+
+    #top-header .account ul{
+        text-align: center;
+    }
+
+    #bottom-header .btn-menu{
+        display: block;
+    }
+
+    #bottom-header .main-menu {
+        transition: 2s ease;
+        transform: scaleY(0);
+        display: none;
+        margin-bottom: 0;
+    }
+    
+    #bottom-header .main-menu.active {
+        transition: 2s ease;
+        transform: scaleY(1);
+        visibility: visible;
+        display: block;
+    }
+
+    #top-header .account ul li {
+        margin:5px;
+    }
+
+    #top-header .account ul li:nth-child(2) {
+        border:none;
+    }
+
+    #header::after{
+        display: none;
+    }
+    #bottom-header .container {
+        max-width: 100%;
+    }
+    #bottom-header .main-menu ul li {
+        display: block;
+        background: #333;   
+        padding: 10px 0;
+        border: 1px solid #555;
+    }
+
+    #bottom-header .main-menu ul li a{
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding-right: 0;
+        padding-left: 0;
+        color: white;
+
+    }
+
+    #hanpicked .product-feature .product-item:nth-child(1) {
+        grid-column: 1/13 !important;
+        grid-row:1;
+    }
+    
+    #hanpicked .product-feature .product-item:nth-child(2) {
+        grid-column: 1/13 !important;
+        grid-row:2;
+    }
+    
+    #hanpicked .product-feature .product-item:nth-child(3) {
+        grid-column: 1/13 !important;
+        grid-row:3;
+    }
+    
+    #hanpicked .product-feature .product-item:nth-child(4) {
+        grid-column: 1/13 !important;
+        grid-row:4;
+    }
+    
+    #hanpicked .product-feature .product-item:nth-child(5) {
+        grid-column: 1/13 !important;
+        grid-row:5;
+    }
+
+    #summer-collection .list-product .box-product {
+        width: calc(100%/1);
+    }
+
+    #our-brand .box-brand .brand-image {
+        width: calc(100%)!important;
+    }
+}
